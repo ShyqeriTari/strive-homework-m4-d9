@@ -36,7 +36,7 @@ console.log(data)
     return(
         <>
         <h1 className="text-center text-white mb-3">Registration page</h1>
-
+<div style={{width: '50%', margin: 'auto'}}>
         <Form onSubmit={ handleSubmit }>  
      <Form.Group className="mb-3" controlId="formBasicName">
        <Form.Control type="text" placeholder="Name"  onKeyUp={(e) => e.target.value.length >= 2 ?
@@ -54,6 +54,7 @@ console.log(data)
      <Form.Group className="mb-3" controlId="formBasicPassword">
        <Form.Control type="password" placeholder="password"  onKeyUp={(e) => (e.target.value.length >= 8&&e.target.value.match(/\d+/g) && e.target.value.match(/[a-z]/) ) ?
                 handleChange('password', e.target.value): setData({...data, password:null})} required/>
+         <label htmlFor="formBasicPassword" className='text-white'>The password should contain at least 8 chars, 1 digit, 1 letter</label>
      </Form.Group>
      <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
        <Form.Control type="password" placeholder="confirm password"  onKeyUp={(e) => e.target.value === data.password ?
@@ -71,7 +72,7 @@ console.log(data)
    <h4 className='text-white'>Email: {data.email}</h4>
 
    </div>}
-
+   </div>
         </>
     )
 }
