@@ -41,15 +41,21 @@ console.log(data)
      <Form.Group className="mb-3" controlId="formBasicName">
        <Form.Control type="text" placeholder="Name"  onKeyUp={(e) => e.target.value.length >= 2 ?
                 handleChange('name', e.target.value): setData({...data, name:null})} required/>
+                                 <label htmlFor="formBasicName" className='text-white'>The name should at least 2 chars </label>
+
      </Form.Group>
    
      <Form.Group className="mb-3" controlId="formBasicSurname">
        <Form.Control type="text" placeholder="Surname" onKeyUp={(e) => e.target.value.length >= 3 ?
                 handleChange('surname', e.target.value): setData({...data, surname:null})} required/>
+                         <label htmlFor="formBasicSurname" className='text-white'>The surname should contain at least 3 chars </label>
+
      </Form.Group>
      <Form.Group className="mb-3" controlId="formBasicEmail">
        <Form.Control type="email" placeholder="email"  onKeyUp={(e) =>
                 handleChange('email', e.target.value)} required/>
+                                         <label htmlFor="formBasicEmail" className='text-white'>Insert a valid email </label>
+
      </Form.Group>
      <Form.Group className="mb-3" controlId="formBasicPassword">
        <Form.Control type="password" placeholder="password"  onKeyUp={(e) => (e.target.value.length >= 8&&e.target.value.match(/\d+/g) && e.target.value.match(/[a-z]/) ) ?
