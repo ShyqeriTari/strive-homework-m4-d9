@@ -41,7 +41,7 @@ console.log(data)
      <Form.Group className="mb-3" controlId="formBasicName">
        <Form.Control type="text" placeholder="Name"  onKeyUp={(e) => e.target.value.length >= 2 ?
                 handleChange('name', e.target.value): setData({...data, name:null})} required/>
-                                 <label htmlFor="formBasicName" className='text-white'>The name should at least 2 chars </label>
+                                 <label htmlFor="formBasicName" className='text-white'>The name should contain at least 2 chars </label>
 
      </Form.Group>
    
