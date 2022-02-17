@@ -6,7 +6,7 @@ import Book from './Book'
 import books from '../data/history.json'
 import CommentArea from './CommentArea'
 
-export default function BookWrapper (){
+function BookWrapper (){
  
 
   const [bookTitle, setBookTitle] = useState('')
@@ -49,3 +49,5 @@ export default function BookWrapper (){
       </Container>
     )
 }
+
+export default BookWrapper
